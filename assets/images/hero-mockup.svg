@@ -1,0 +1,113 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 800" width="400" height="800">
+  <defs>
+    <!-- Phone gradient -->
+    <linearGradient id="phoneGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#F9E6F2;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E6D8FF;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Screen gradient -->
+    <linearGradient id="screenGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFF6F0;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFFFFF;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Card gradient -->
+    <linearGradient id="cardGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FF7F87;stop-opacity:0.1" />
+      <stop offset="100%" style="stop-color:#B85C8A;stop-opacity:0.1" />
+    </linearGradient>
+    
+    <!-- Shadow -->
+    <filter id="shadow">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-opacity="0.2"/>
+    </filter>
+  </defs>
+  
+  <!-- Phone body -->
+  <g filter="url(#shadow)">
+    <!-- Phone frame -->
+    <rect x="50" y="50" width="300" height="700" rx="30" fill="url(#phoneGradient)" stroke="#B85C8A" stroke-width="2"/>
+    
+    <!-- Notch -->
+    <rect x="150" y="50" width="100" height="25" rx="15" fill="#333333"/>
+    
+    <!-- Screen -->
+    <rect x="65" y="85" width="270" height="640" rx="15" fill="url(#screenGradient)"/>
+    
+    <!-- Status bar -->
+    <g opacity="0.6">
+      <text x="80" y="110" font-family="Arial, sans-serif" font-size="12" fill="#666666">9:41</text>
+      <circle cx="310" cy="105" r="3" fill="#4CAF50"/>
+      <rect x="315" y="102" width="12" height="6" rx="2" fill="#666666"/>
+    </g>
+    
+    <!-- Header -->
+    <g>
+      <text x="200" y="155" font-family="Poppins, sans-serif" font-size="24" font-weight="700" text-anchor="middle" fill="#1A1A1A">PeauTrace</text>
+      <text x="200" y="180" font-family="Poppins, sans-serif" font-size="14" text-anchor="middle" fill="#666666">Your Skincare Journey</text>
+    </g>
+    
+    <!-- Streak card -->
+    <g>
+      <rect x="85" y="210" width="230" height="100" rx="15" fill="url(#cardGradient)" stroke="#FF7F87" stroke-width="1"/>
+      <circle cx="135" cy="260" r="25" fill="#FF7F87" opacity="0.2"/>
+      <text x="135" y="268" font-family="Poppins, sans-serif" font-size="24" font-weight="700" text-anchor="middle" fill="#FF7F87">7</text>
+      <text x="185" y="250" font-family="Poppins, sans-serif" font-size="16" font-weight="600" fill="#1A1A1A">Day Streak!</text>
+      <text x="185" y="275" font-family="Poppins, sans-serif" font-size="12" fill="#666666">Keep it up! 🔥</text>
+    </g>
+    
+    <!-- Routine checklist -->
+    <g>
+      <text x="85" y="345" font-family="Poppins, sans-serif" font-size="16" font-weight="600" fill="#1A1A1A">Morning Routine</text>
+      
+      <!-- Checklist items -->
+      <g transform="translate(85, 365)">
+        <!-- Item 1 -->
+        <circle cx="12" cy="12" r="10" fill="#4CAF50"/>
+        <path d="M8 12 L11 15 L16 9" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <text x="35" y="17" font-family="Poppins, sans-serif" font-size="14" fill="#666666">Cleanser</text>
+        
+        <!-- Item 2 -->
+        <circle cx="12" cy="42" r="10" fill="#4CAF50"/>
+        <path d="M8 42 L11 45 L16 39" stroke="#FFFFFF" stroke-width="2" fill="none" stroke-linecap="round"/>
+        <text x="35" y="47" font-family="Poppins, sans-serif" font-size="14" fill="#666666">Toner</text>
+        
+        <!-- Item 3 -->
+        <circle cx="12" cy="72" r="10" fill="#E6E6E6"/>
+        <text x="35" y="77" font-family="Poppins, sans-serif" font-size="14" fill="#999999">Serum</text>
+        
+        <!-- Item 4 -->
+        <circle cx="12" cy="102" r="10" fill="#E6E6E6"/>
+        <text x="35" y="107" font-family="Poppins, sans-serif" font-size="14" fill="#999999">Moisturizer</text>
+      </g>
+    </g>
+    
+    <!-- Progress photos section -->
+    <g>
+      <text x="85" y="530" font-family="Poppins, sans-serif" font-size="16" font-weight="600" fill="#1A1A1A">Progress Photos</text>
+      
+      <rect x="85" y="545" width="100" height="100" rx="10" fill="#CFFFE5" opacity="0.3"/>
+      <text x="135" y="600" font-family="Poppins, sans-serif" font-size="40" text-anchor="middle" fill="#4CAF50" opacity="0.5">📸</text>
+      
+      <rect x="200" y="545" width="100" height="100" rx="10" fill="#E6D8FF" opacity="0.3"/>
+      <text x="250" y="600" font-family="Poppins, sans-serif" font-size="40" text-anchor="middle" fill="#B85C8A" opacity="0.5">📸</text>
+    </g>
+    
+    <!-- Bottom navigation -->
+    <g>
+      <line x1="85" y1="685" x2="315" y2="685" stroke="#E6E6E6" stroke-width="1"/>
+      
+      <g transform="translate(110, 695)">
+        <circle cx="0" cy="15" r="8" fill="#FF7F87"/>
+        <circle cx="60" cy="15" r="8" fill="#CCCCCC"/>
+        <circle cx="120" cy="15" r="8" fill="#CCCCCC"/>
+        <circle cx="180" cy="15" r="8" fill="#CCCCCC"/>
+      </g>
+    </g>
+    
+    <!-- Home indicator (for modern phones) -->
+    <rect x="170" y="740" width="60" height="4" rx="2" fill="#999999" opacity="0.5"/>
+  </g>
+</svg>
+
