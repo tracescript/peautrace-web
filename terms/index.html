@@ -5,23 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Terms of Service - PeauTrace</title>
     <meta name="description" content="Read the terms of service for using the PeauTrace app.">
+    
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="../assets/images/logo.svg">
+    
+    <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- AOS (Animate On Scroll) -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- Alpine.js -->
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom Styles -->
     <link rel="stylesheet" href="../css/style.css">
+    
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: {
+                            50: '#FFF6F0',
+                            100: '#F9E6F2',
+                            200: '#E6C2D6',
+                            300: '#D4A5C0',
+                            400: '#C288AA',
+                            500: '#B85C8A',
+                            600: '#9D4D74',
+                            700: '#823E5E',
+                            800: '#672F48',
+                            900: '#4C2032',
+                        },
+                        coral: {
+                            DEFAULT: '#FF7F87',
+                            light: '#FFB3B8',
+                            dark: '#FF4C56',
+                        },
+                        mint: {
+                            DEFAULT: '#CFFFE5',
+                            light: '#E8FFE8',
+                            dark: '#9FFFC9',
+                        },
+                        lavender: {
+                            DEFAULT: '#E6D8FF',
+                            light: '#F0E8FF',
+                            dark: '#D4C2FF',
+                        },
+                        cream: '#FFF6F0',
+                        gold: '#FFD700',
+                    },
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                        display: ['Playfair Display', 'serif'],
+                    },
+                }
+            }
+        }
+    </script>
 </head>
 <body class="font-sans antialiased overflow-x-hidden animated-bg">
+    
+    <!-- Navigation -->
     <nav class="fixed w-full z-50 bg-white/80 backdrop-blur-md shadow-sm" x-data="{ mobileMenuOpen: false }">
         <div class="container mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <a href="../index.html" class="flex items-center space-x-3 group">
                     <img src="../assets/images/logo.png" alt="PeauTrace Logo" class="h-10 w-10 transition-transform group-hover:scale-110">
-                    <span class="text-2xl font-display font-bold bg-gradient-to-r from-primary-500 to-coral bg-clip-text text-transparent">PeauTrace</span>
+                    <span class="text-2xl font-display font-bold bg-gradient-to-r from-primary-500 to-coral bg-clip-text text-transparent">
+                        PeauTrace
+                    </span>
                 </a>
+                
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="../index.html#features" class="text-gray-700 hover:text-coral transition-colors font-medium">Features</a>
                     <a href="../index.html#download" class="text-gray-700 hover:text-coral transition-colors font-medium">Download</a>
@@ -29,6 +91,7 @@
                     <a href="../terms/" class="text-coral transition-colors font-medium">Terms</a>
                     <a href="../support/" class="text-gray-700 hover:text-coral transition-colors font-medium">Support</a>
                 </div>
+                
                 <button @click="mobileMenuOpen = !mobileMenuOpen" class="md:hidden p-2 rounded-lg hover:bg-gray-100 transition-colors">
                     <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path x-show="!mobileMenuOpen" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
@@ -36,6 +99,7 @@
                     </svg>
                 </button>
             </div>
+            
             <div x-show="mobileMenuOpen" x-transition class="md:hidden pb-4">
                 <div class="flex flex-col space-y-3">
                     <a href="../index.html#features" class="text-gray-700 hover:text-coral transition-colors font-medium py-2">Features</a>
@@ -47,54 +111,192 @@
             </div>
         </div>
     </nav>
-
+    
     <!-- Hero Section -->
     <section class="pt-32 pb-12 px-4 sm:px-6 lg:px-8">
         <div class="container mx-auto max-w-4xl">
             <div class="text-center" data-aos="fade-up">
                 <div class="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-coral to-primary-500 rounded-full mb-6">
-                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path></svg>
+                    <svg class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
                 </div>
-                <h1 class="text-4xl lg:text-5xl font-display font-bold text-gray-900 mb-4">Terms of Service</h1>
-                <p class="text-xl text-gray-600 mb-4">Please Read These Terms Carefully</p>
+                <h1 class="text-4xl lg:text-5xl font-display font-bold text-gray-900 mb-4">
+                    Terms of Service
+                </h1>
+                <p class="text-xl text-gray-600 mb-4">
+                    Please Read These Terms Carefully
+                </p>
                 <div class="inline-flex items-center space-x-2 bg-primary-100 px-4 py-2 rounded-full">
-                    <svg class="w-5 h-5 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    <svg class="w-5 h-5 text-primary-500" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
                     <span class="text-sm text-gray-700">Last Updated: November 2025</span>
                 </div>
             </div>
         </div>
     </section>
-
+    
     <!-- Content Section -->
     <section class="pb-20 px-4 sm:px-6 lg:px-8">
         <div class="container mx-auto max-w-4xl">
             <div class="bg-white rounded-3xl shadow-xl p-8 md:p-12" data-aos="fade-up" data-aos-delay="100">
-                <!-- Copied content from original terms.html (abridged for brevity) -->
+                
+                <!-- Acceptance -->
                 <div class="mb-10">
                     <h2 class="text-2xl font-display font-bold text-gray-900 mb-4">1. Acceptance of Terms</h2>
-                    <p class="text-gray-700 leading-relaxed">By downloading, installing, or using the PeauTrace mobile application ("App"), you agree to be bound by these Terms of Service ("Terms").</p>
+                    <p class="text-gray-700 leading-relaxed">
+                        By downloading, installing, or using the PeauTrace mobile application ("App"), you agree to be bound by these Terms of Service ("Terms"). If you do not agree to these Terms, please do not use the App.
+                    </p>
                 </div>
+                
+                <!-- Description -->
                 <div class="mb-10">
                     <h2 class="text-2xl font-display font-bold text-gray-900 mb-4">2. Description of Service</h2>
+                    <p class="text-gray-700 mb-4">PeauTrace is a skincare tracking and management application that helps users:</p>
                     <ul class="space-y-2 text-gray-700">
-                        <li class="flex items-start"><svg class="w-5 h-5 text-coral mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Track routines and products</li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-coral mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Monitor progress</li>
-                        <li class="flex items-start"><svg class="w-5 h-5 text-coral mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path></svg>Receive recommendations</li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-coral mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Track their skincare routines and products
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-coral mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Monitor skin progress and changes
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-coral mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Receive personalized skincare recommendations
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-coral mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Set reminders for skincare routines
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-5 h-5 text-coral mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"></path>
+                            </svg>
+                            Store product information and reviews
+                        </li>
                     </ul>
+                    <p class="text-gray-600 text-sm mt-4">We reserve the right to modify, suspend, or discontinue any aspect of the Service at any time.</p>
                 </div>
+                
+                <!-- User Accounts -->
+                <div class="mb-10">
+                    <h2 class="text-2xl font-display font-bold text-gray-900 mb-4">3. User Accounts</h2>
+                    <p class="text-gray-700 mb-4">To use certain features of the App, you must create an account. You are responsible for:</p>
+                    <div class="bg-gray-50 p-6 rounded-xl space-y-3">
+                        <p class="text-gray-700">• Providing accurate and complete information</p>
+                        <p class="text-gray-700">• Maintaining the security of your account credentials</p>
+                        <p class="text-gray-700">• All activities that occur under your account</p>
+                        <p class="text-gray-700">• Notifying us immediately of any unauthorized use</p>
+                    </div>
+                </div>
+                
+                <!-- Medical Disclaimer -->
                 <div class="mb-10 p-6 bg-gradient-to-r from-red-50 to-orange-50 rounded-2xl border-2 border-red-200">
                     <div class="flex items-start">
-                        <svg class="w-8 h-8 text-red-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path></svg>
+                        <svg class="w-8 h-8 text-red-500 mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"></path>
+                        </svg>
                         <div>
-                            <h2 class="text-2xl font-display font-bold text-gray-900 mb-3">Medical Disclaimer</h2>
-                            <p class="text-gray-700 leading-relaxed">PeauTrace is not a medical device or diagnostic tool. Always consult with a qualified professional.</p>
+                            <h2 class="text-2xl font-display font-bold text-gray-900 mb-3">6. Medical Disclaimer</h2>
+                            <p class="text-gray-700 font-semibold mb-2">IMPORTANT:</p>
+                            <p class="text-gray-700 leading-relaxed">
+                                PeauTrace is not a medical device or diagnostic tool. The App provides general skincare information and tracking features only. Always consult with a qualified dermatologist or healthcare professional for medical advice, diagnosis, or treatment. We are not responsible for any health decisions made based on information from the App.
+                            </p>
                         </div>
                     </div>
                 </div>
+                
+                <!-- Prohibited Uses -->
+                <div class="mb-10">
+                    <h2 class="text-2xl font-display font-bold text-gray-900 mb-4">5. Prohibited Uses</h2>
+                    <p class="text-gray-700 mb-4">You may not use the App to:</p>
+                    <div class="grid md:grid-cols-2 gap-3">
+                        <div class="flex items-start bg-gray-50 p-4 rounded-lg">
+                            <svg class="w-5 h-5 text-red-500 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700 text-sm">Violate any applicable laws</span>
+                        </div>
+                        <div class="flex items-start bg-gray-50 p-4 rounded-lg">
+                            <svg class="w-5 h-5 text-red-500 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700 text-sm">Infringe on intellectual property</span>
+                        </div>
+                        <div class="flex items-start bg-gray-50 p-4 rounded-lg">
+                            <svg class="w-5 h-5 text-red-500 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700 text-sm">Transmit harmful code</span>
+                        </div>
+                        <div class="flex items-start bg-gray-50 p-4 rounded-lg">
+                            <svg class="w-5 h-5 text-red-500 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700 text-sm">Gain unauthorized access</span>
+                        </div>
+                        <div class="flex items-start bg-gray-50 p-4 rounded-lg">
+                            <svg class="w-5 h-5 text-red-500 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700 text-sm">Use for commercial purposes</span>
+                        </div>
+                        <div class="flex items-start bg-gray-50 p-4 rounded-lg">
+                            <svg class="w-5 h-5 text-red-500 mt-1 mr-3 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                                <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.707 7.293a1 1 0 00-1.414 1.414L8.586 10l-1.293 1.293a1 1 0 101.414 1.414L10 11.414l1.293 1.293a1 1 0 001.414-1.414L11.414 10l1.293-1.293a1 1 0 00-1.414-1.414L10 8.586 8.707 7.293z" clip-rule="evenodd"></path>
+                            </svg>
+                            <span class="text-gray-700 text-sm">Harass or harm other users</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Intellectual Property -->
+                <div class="mb-10">
+                    <h2 class="text-2xl font-display font-bold text-gray-900 mb-4">8. Intellectual Property</h2>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        The App and its original content, features, and functionality are owned by PeauTrace and are protected by international copyright, trademark, and other intellectual property laws.
+                    </p>
+                </div>
+                
+                <!-- Limitation -->
+                <div class="mb-10 p-6 bg-gray-50 rounded-xl">
+                    <h2 class="text-2xl font-display font-bold text-gray-900 mb-4">9. Limitation of Liability</h2>
+                    <p class="text-gray-700 leading-relaxed uppercase text-sm font-semibold">
+                        THE APP IS PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND. TO THE MAXIMUM EXTENT PERMITTED BY LAW, WE SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES.
+                    </p>
+                </div>
+                
+                <!-- Agreement Box -->
+                <div class="mt-12 p-8 bg-gradient-to-r from-coral/10 to-primary-500/10 rounded-2xl border-2 border-coral/20">
+                    <div class="flex items-start">
+                        <svg class="w-8 h-8 text-coral mr-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                        </svg>
+                        <div>
+                            <h2 class="text-2xl font-display font-bold text-gray-900 mb-3">Agreement</h2>
+                            <p class="text-gray-700 leading-relaxed">
+                                By using PeauTrace, you acknowledge that you have read, understood, and agree to be bound by these Terms of Service. If you have any questions, please contact us at <a href="mailto:support@peautrace.com" class="text-coral hover:underline font-semibold">support@peautrace.com</a>.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
             </div>
         </div>
     </section>
-
+    
+    <!-- Footer -->
     <footer class="bg-gray-900 text-white py-12 px-4 sm:px-6 lg:px-8">
         <div class="container mx-auto">
             <div class="grid md:grid-cols-4 gap-8 mb-8">
@@ -103,8 +305,12 @@
                         <img src="../assets/images/logo.png" alt="PeauTrace Logo" class="h-10 w-10">
                         <span class="text-2xl font-display font-bold">PeauTrace</span>
                     </div>
-                    <p class="text-gray-400 mb-4">Trace your beauty. Track your glow.<br> Your personal skincare companion for building healthy beauty habits.</p>
+                    <p class="text-gray-400 mb-4">
+                        Trace your beauty. Track your glow.<br>
+                        Your personal skincare companion for building healthy beauty habits.
+                    </p>
                 </div>
+                
                 <div>
                     <h4 class="font-bold text-lg mb-4">Quick Links</h4>
                     <ul class="space-y-2">
@@ -113,6 +319,7 @@
                         <li><a href="../support/" class="text-gray-400 hover:text-coral transition-colors">Support</a></li>
                     </ul>
                 </div>
+                
                 <div>
                     <h4 class="font-bold text-lg mb-4">Legal</h4>
                     <ul class="space-y-2">
@@ -121,14 +328,16 @@
                     </ul>
                 </div>
             </div>
+            
             <div class="border-t border-gray-800 pt-8 text-center text-gray-400">
                 <p>© 2025 ScreenTrace Technologies. All rights reserved.</p>
             </div>
         </div>
     </footer>
+    
+    <!-- AOS Init -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="../js/main.js"></script>
 </body>
 </html>
-
 
